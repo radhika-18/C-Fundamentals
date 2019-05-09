@@ -6,7 +6,14 @@ namespace Gradebook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! here for commit ");
+            if(args.Length>0)
+            {
+                Console.WriteLine($"Hello there Mr {args[0]}!");
+            }
+            else
+            {
+                Console.WriteLine("Hello World! here for commit ");
+            }
         }
     }
 }
