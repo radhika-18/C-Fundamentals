@@ -1,0 +1,5 @@
+Electronic gradebook to read scores of individual student
+compute its statistics
+
+grades - floating pt number <0,100>
+stats show highest grad, lowest, averga
