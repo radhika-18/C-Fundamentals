@@ -22,6 +22,7 @@ namespace Gradebook
             double result = 0.0;
             foreach(double grade in gradesList)
             { result += grade; }
+            
             return result/gradesList.Count;
         }
 
