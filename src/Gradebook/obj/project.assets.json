@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\nair_r\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\C#Fundamentals\\gradebook\\src\\Gradebook\\Gradebook.csproj",
+      "projectUniqueName": "D:\\SelfStudy\\C#\\C-Fundamentals\\src\\Gradebook\\Gradebook.csproj",
       "projectName": "Gradebook",
-      "projectPath": "E:\\C#\\C#Fundamentals\\gradebook\\src\\Gradebook\\Gradebook.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\C#Fundamentals\\gradebook\\src\\Gradebook\\obj\\",
+      "projectPath": "D:\\SelfStudy\\C#\\C-Fundamentals\\src\\Gradebook\\Gradebook.csproj",
+      "packagesPath": "C:\\Users\\nair_r\\.nuget\\packages\\",
+      "outputPath": "D:\\SelfStudy\\C#\\C-Fundamentals\\src\\Gradebook\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\nair_r\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
