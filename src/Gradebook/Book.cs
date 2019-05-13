@@ -29,12 +29,13 @@ namespace Gradebook
             statObj.lowgrade = double.MaxValue;
             statObj.highgrade = double.MinValue;            
 
-            foreach(double grade in this._gradesList)
+            int index = 0;
+            do
             { 
-                statObj.lowgrade = Math.Min(grade, statObj.lowgrade);
-                statObj.highgrade = Math.Max(grade, statObj.highgrade);
-                statObj.average += grade;
-            }
+                statObj.lowgrade = Math.Min(this._gradesList[index], statObj.lowgrade);
+                statObj.highgrade = Math.Max(this._gradesList[index], statObj.highgrade);
+                statObj.average += this._gradesList[index];
+            }while(++index != this._gradesList.Count);
             statObj.average /= this._gradesList.Count;
             return statObj;
         }
