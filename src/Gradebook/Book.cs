@@ -1,48 +1,67 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
-namespace Gradebook
-{
-    public class Book
-    {
+namespace Gradebook {
+    public delegate void AddGradeDelegate (object sender, EventArgs gradeAddedEvent);
+    public class InMemoryBook : Book {
+        public override event AddGradeDelegate GradeAdded;
         private List<double> _gradesList;
-        public string Name;
-
-        public Book()
-        {
-            this._gradesList = new List<double>();
+        public InMemoryBook () {
+            this._gradesList = new List<double> ();
         }
-
-        public Book(string name)
-        {
-            Name = name;
+        public InMemoryBook (string name) : base (name) {
+            this._gradesList = new List<double> ();
         }
-        public void AddGrade(double grade)
-        {
-            this._gradesList.Add(grade);
+        public override void AddGrade (double grade) {
+            if (grade > 0 && grade <= 100) {
+                this._gradesList.Add (grade);
+                if (GradeAdded != null) {
+                    GradeAdded (this, new EventArgs ());
+                }
+            } else {
+                throw new ArgumentException ($"Invalid {nameof(grade)}");
+            }
         }
-
-        public Statistics GetStatistics()
-        {            
-            Statistics statObj = new Statistics();
-            statObj.average = 0.0;
-            statObj.lowgrade = double.MaxValue;
-            statObj.highgrade = double.MinValue;            
-
-            int index = 0;
-            do
-            { 
-                statObj.lowgrade = Math.Min(this._gradesList[index], statObj.lowgrade);
-                statObj.highgrade = Math.Max(this._gradesList[index], statObj.highgrade);
-                statObj.average += this._gradesList[index];
-            }while(++index != this._gradesList.Count);
-            statObj.average /= this._gradesList.Count;
+        public override Statistics GetStatistics () {
+            Statistics statObj = new Statistics ();
+            foreach (double grade in _gradesList) { statObj.CalculateStatistics (grade); }
             return statObj;
         }
 
-        public void ShowStatistics(Statistics statObj)
-        {
-            Console.WriteLine(value: $"The average of the grades provides is {statObj.average}.\nThe highest grade being {statObj.highgrade} and the lowest grade being {statObj.lowgrade}.");
+    }
+    public class DiskBook : Book {
+        public override event AddGradeDelegate GradeAdded;
+
+        public DiskBook () { }
+
+        public DiskBook (string name) : base (name) { }
+
+        public override void AddGrade (double grade) {
+            if (grade > 0 && grade <= 100) {
+                using (var writerObject = File.AppendText ($"{Name}.txt")) {
+                    writerObject.WriteLine (grade);
+                    if (GradeAdded != null) {
+                        GradeAdded (this, new EventArgs ());
+                    }
+                }
+            } else {
+                throw new ArgumentException ($"Invalid {nameof(grade)}");
+            }
+        }
+
+        public override Statistics GetStatistics () {
+            Statistics statObj = new Statistics ();
+            double grade = 0.0;
+            using (var readerObj = File.OpenText ($"{Name}.txt")) {
+                var line = readerObj.ReadLine ();
+                while (!string.IsNullOrEmpty (line)) {
+                    Double.TryParse (line, out grade);
+                    statObj.CalculateStatistics (grade);
+                    line = readerObj.ReadLine ();
+                }
+            }
+            return statObj;
         }
     }
 }

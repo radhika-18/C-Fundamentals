@@ -1,0 +1,17 @@
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.Tests.deps.json
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.Tests.runtimeconfig.json
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.Tests.runtimeconfig.dev.json
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.Tests.dll
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.Tests.pdb
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.csprojAssemblyReference.cache
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.csproj.CoreCompileInputs.cache
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.AssemblyInfoInputs.cache
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.AssemblyInfo.cs
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.dll
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.pdb
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.dll
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\bin\Debug\netcoreapp2.2\Gradebook.pdb
+E:\C#\C#Fundamentals\gradebook\test\Gradebook.Tests\obj\Debug\netcoreapp2.2\Gradebook.Tests.csproj.CopyComplete
